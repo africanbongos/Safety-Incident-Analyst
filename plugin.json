@@ -1,0 +1,9 @@
+{
+  "name": "frontline-safety-agent",
+  "version": "1.0.0",
+  "description": "Your AI safety advisor. Upload incident logs or SafetyCulture exports and find out where to focus: hotspots, trends, root cause themes and a prioritised plan.",
+  "author": { "name": "Frontline", "url": "https://getfrontline.io" },
+  "homepage": "https://getfrontline.io",
+  "skills": "./skills/",
+  "extensions": { "com.openai": { "displayName": "Safety Incident Analyst", "shortDescription": "Know where to focus on safety", "privacyPolicyURL": "https://getfrontline.io/privacy" } }
+}
