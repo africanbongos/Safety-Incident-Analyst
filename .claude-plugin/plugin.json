@@ -1,0 +1,11 @@
+{
+  "name": "frontline-safety-agent",
+  "displayName": "Safety Incident Analyst",
+  "version": "1.0.0",
+  "description": "Your AI safety advisor. Upload incident logs, SafetyCulture exports or any safety data and find out where to focus: hotspots, trends, root cause themes, early warning signs and a prioritised 30-60-90 day plan.",
+  "author": { "name": "Frontline", "url": "https://getfrontline.io" },
+  "homepage": "https://getfrontline.io",
+  "repository": "https://github.com/africanbongos/Safety-Incident-Analyst",
+  "license": "MIT",
+  "keywords": ["safety", "incident analysis", "EHS", "WHS", "OHS", "HSEQ", "SafetyCulture", "trends", "root cause", "safety advisor", "near miss", "compliance"]
+}
