@@ -1,6 +1,6 @@
 # Safety Incident Analyst (by Frontline)
 
-Your AI safety advisor. Upload your incident logs, SafetyCulture exports or any safety data and find out exactly where to focus next, backed by your own numbers. Works in Claude Cowork, Claude Code and the Claude apps.
+Your AI incident analyst. Upload your incident logs, SafetyCulture exports or any safety data and find out exactly where to focus next, backed by your own numbers. Works in Claude Cowork, Claude Code and the Claude apps.
 
 ## What it does
 
