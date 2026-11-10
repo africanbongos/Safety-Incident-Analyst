@@ -36,6 +36,6 @@ This plugin runs entirely inside your own Claude session. It does not send, stor
 
 Outputs are advice based on the data provided, not legal advice. Check against your own records and current legislation, and use competent judgement before acting.
 
-## What this plugin runs
+## What this plugin contains
 
-The skill includes three readable Python helper scripts in `skills/safety-agent/scripts/`: `incident_tools.py` (cleans and summarises the data you upload, using pandas), `charts.py` (draws charts with matplotlib) and `xlsx_builder.py` (builds the Excel output with openpyxl, and if LibreOffice is installed, runs it locally in headless mode to recalculate formulas). They work only on files in your session. They make no network calls and fetch nothing from the internet.
+Instructions and reference material only (Markdown). It ships no scripts or executables and makes no network calls.
