@@ -1,7 +1,7 @@
 {
   "name": "frontline-safety-agent",
   "displayName": "Safety Incident Analyst",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Your AI safety advisor. Upload incident logs, SafetyCulture exports or any safety data and find out where to focus: hotspots, trends, root cause themes, early warning signs and a prioritised 30-60-90 day plan.",
   "author": { "name": "Frontline", "url": "https://getfrontline.io" },
   "homepage": "https://getfrontline.io",
