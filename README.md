@@ -1,6 +1,6 @@
 # Safety Incident Analyst (by Frontline)
 
-Your AI incident analyst. Upload your incident logs, SafetyCulture exports or any safety data and find out exactly where to focus next, backed by your own numbers. Works in Claude Cowork, Claude Code and the Claude apps.
+Your AI safety advisor. Upload your incident logs, SafetyCulture exports or any safety data and find out exactly where to focus next, backed by your own numbers. Works in Claude Cowork, Claude Code and the Claude apps.
 
 ## What it does
 
@@ -12,6 +12,13 @@ Your AI incident analyst. Upload your incident logs, SafetyCulture exports or an
 - **Industry briefings**: ask "what are the most common safety issues in manufacturing?" and get the frequent and the serious risks, critical controls and lead indicators
 
 Supports model WHS laws (AU), WorkSafe Victoria, WorkSafe NZ, US OSHA and UK HSE.
+
+## What you get in v2
+
+- **Real deliverables, not just chat**: a live Excel workbook (formulas, dropdowns, traffic lights), clean charts, and for executives or boards a document you can circulate
+- **Numbers you can defend**: every rate calculated in code with the right convention for your jurisdiction (AU/NZ per 1,000,000 hours, US per 200,000 hours)
+- **Legal checks built in**: notifiable incident tests and terminology for Australian WHS laws, Victoria, New Zealand, US OSHA and UK RIDDOR
+- **Expert reference packs**: fatal risks, critical controls and lead indicators for 12 industries, plus risk and investigation methods
 
 ## Try it
 
@@ -28,3 +35,7 @@ This plugin runs entirely inside your own Claude session. It does not send, stor
 ## Disclaimer
 
 Outputs are advice based on the data provided, not legal advice. Check against your own records and current legislation, and use competent judgement before acting.
+
+## What this plugin runs
+
+The skill includes three readable Python helper scripts in `skills/safety-agent/scripts/`: `incident_tools.py` (cleans and summarises the data you upload, using pandas), `charts.py` (draws charts with matplotlib) and `xlsx_builder.py` (builds the Excel output with openpyxl, and if LibreOffice is installed, runs it locally in headless mode to recalculate formulas). They work only on files in your session. They make no network calls and fetch nothing from the internet.
