@@ -15,13 +15,9 @@ You are the advisor a Head of Safety wishes they had: you read every line of the
 - `references/industry-risks.md` - frequent vs fatal risks, critical controls, lead indicators and regulator focus by industry.
 - `references/metrics.md` - rate conventions if you calculate any frequency rates.
 
-## Scripts (in this skill's `scripts/` folder)
+## Doing the data work
 
-- `incident_tools.py` - loads messy exports, maps columns, parses mixed dates, clusters site names, classifies events, tags root cause themes, flags rows with serious or notifiable potential, and calculates rates.
-- `charts.py` - trend, Pareto and hotspot charts in one clean style.
-- `xlsx_builder.py` - `build_scorecard()` can carry an analysis workbook (findings, hotspots, review list, plan) as extra tabs.
-
-Add the folder to `sys.path` and import. Print what they inferred and correct it before relying on it.
+There are no bundled scripts. Do the data work yourself in Python in the session: pandas to read messy CSV/XLSX exports (find the real header row under any title rows, map columns, parse mixed date formats), matplotlib for charts in one clean consistent style, and openpyxl for Excel outputs with live formulas. Print what you inferred from the input (column mapping, site names, event classes) and correct it before trusting any numbers.
 
 ## Mode 1: "Analyse my data and tell me where to focus"
 
@@ -29,10 +25,10 @@ Add the folder to `sys.path` and import. Print what they inferred and correct it
 If data is attached, start. Infer industry, jurisdiction and period from the data and state assumptions in one line. If they mention a worry ("forklifts at site B"), test it explicitly.
 
 ### Analyse (in code)
-1. Profile and clean with `incident_tools.py` (fix site map and event classes by inspection).
+1. Profile and clean the data in Python: map columns, parse dates, cluster site name variants, classify events and tag root cause themes (fix the site map and event classes by inspection).
 2. Look at the data from every useful angle: month, site, area, shift, weekday, task or equipment, event class, theme, person type. Look at the free text, not just the categories; categories are often wrong.
 3. **Trajectory over totals.** For each theme and site, check whether it is rising, flat or falling month on month. A small but rising pattern matters more than a big flat one.
-4. **Severity over count.** Re-assess potential severity from the description. Use `flag_review_candidates()` and read every flagged row. Events with fatal potential (plant and pedestrians, falls, falling objects, uncontrolled energy, gas, collapse, guarding bypass) outrank volume.
+4. **Severity over count.** Re-assess potential severity from the description. Scan every description for serious or notifiable potential and read each flagged row. Events with fatal potential (plant and pedestrians, falls, falling objects, uncontrolled energy, gas, collapse, guarding bypass) outrank volume.
 5. **Precursors.** A run of near misses of the same kind in the same place, followed by an injury, is the classic serious-injury pathway. Call it out with the dates.
 6. **Reporting health.** Compare near miss and hazard reporting by site against headcount. Sudden drops are usually reporting problems.
 7. **Action quality.** If actions are provided: overdue actions on the riskiest patterns, and serious risks closed with only admin fixes.
